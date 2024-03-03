@@ -34,6 +34,16 @@ body{
     font-weight: 500;
     border-radius: 0.4em;
   }
+  .rearrange button{
+    font-size: 1em;
+    background-color:blue;
+    color: #ffffff;
+    padding: 0.8em 1.2em;
+    font-weight: 500;
+    border-radius: 0.4em;
+    
+
+  }
   #card-con {
     margin-top: 1em;
   }
@@ -128,6 +138,7 @@ body{
     padding: 1.2em;
     border-radius: 0.4em;
   }
+  
   .question-div,
   .answer-div {
     text-align: center;
