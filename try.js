@@ -37,24 +37,21 @@ closeBtn.addEventListener(
 );
 
 // Submit Question
-cardButton.addEventListener(
-  "click",
-  (submitQuestion = () => {
-    editBool = false;
-    tempQuestion = question.value.trim();
-    tempAnswer = answer.value.trim();
-    if (!tempQuestion || !tempAnswer) {
-      errorMessage.classList.remove("hide");
-    } else {
-      container.classList.remove("hide");
-      errorMessage.classList.add("hide");
-      saveFlashcard(tempQuestion, tempAnswer);
-      viewlist(tempQuestion, tempAnswer);
-      question.value = "";
-      answer.value = "";
-    }
-  })
-);
+cardButton.addEventListener("click", () => {
+  editBool = false;
+  tempQuestion = question.value.trim();
+  tempAnswer = answer.value.trim();
+  if (!tempQuestion || !tempAnswer) {
+    errorMessage.classList.remove("hide");
+  } else {
+    container.classList.remove("hide");
+    errorMessage.classList.add("hide");
+    saveFlashcard(tempQuestion, tempAnswer);
+    viewlist(tempQuestion, tempAnswer);
+    question.value = "";
+    answer.value = "";
+  }
+});
 
 // Card Generate
 function viewlist(questionValue, answerValue) {
@@ -62,6 +59,9 @@ function viewlist(questionValue, answerValue) {
   var div = document.createElement("div");
   div.classList.add("card");
   div.setAttribute("draggable", "true");
+
+  // Set data-time attribute to the current timestamp
+  div.setAttribute("data-time", Date.now());
 
   var rearrangeIcon = document.createElement("i");
   rearrangeIcon.classList.add("fas", "fa-bars", "rearrange-icon");
@@ -236,10 +236,10 @@ rearrangeByTimeButton.addEventListener("click", () => {
     const timeB = parseInt(b.getAttribute("data-time"));
     return timeB - timeA; // Sort by descending order of time (recent cards first)
   });
-  const cardListContainer = document.querySelector(".card-list-container");
   cardListContainer.innerHTML = '';
   sortedCards.forEach((card) => {
     cardListContainer.appendChild(card);
   });
 });
+
 

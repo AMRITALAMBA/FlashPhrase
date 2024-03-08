@@ -1,3 +1,16 @@
+
+.madimi-one-regular {
+	font-family: "Madimi One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+.acme-regular {
+	font-family: "Acme", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+  
+  
 html, body, #home {
 	height: 100%;
 	overflow-x: hidden;
@@ -6,8 +19,9 @@ html, body, #home {
 body {
 	background: url(images/check.png);
 	background-attachment: fixed;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size: medium;
+	font-family:"Madimi One";
+	letter-spacing:3%;
+	font-size:medium;
 	font-weight: bold;
     background-repeat:no-repeat;
     background-size:200vh;
@@ -17,6 +31,7 @@ body {
 nav.navbar-transparent {
 	padding: 15px 0px;
 	background: rgba(0,0,0,0.6);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -79,10 +94,11 @@ nav.navbar-transparent {
 .box {
 	padding-top: 20px;
 	padding-bottom: 20px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #services {
-	background: white;
+	background:#FFE5B4;
 }
 
 #features {
@@ -92,7 +108,7 @@ nav.navbar-transparent {
 }
 
 #services h2, h3 {
-	color: #7c25f8;
+	color:#1F2833;
 }
 
 #features h2 {
@@ -108,7 +124,7 @@ nav.navbar-transparent {
 }
 
  #user .container {
-	position: relative;
+	padding-top:2px;
 	width: 100%;
 	min-height: 100vh;
 	background:none;
@@ -120,6 +136,7 @@ nav.navbar-transparent {
   }
   
   .drop {
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	position: relative;
 	width: 350px;
 	height: 350px;
@@ -187,12 +204,9 @@ nav.navbar-transparent {
 	position: relative;
 	width: 80px;
 	height: 80px;
-	background: #eff0f4;
+	
 	border-radius: 50%;
-	box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
-	  inset -2px -5px 10px rgba(255, 255, 255, 1),
-	  15px 15px 10px rgba(0, 0, 0, 0.05),
-	  15px 10px 15px rgba(0, 0, 0, 0.025);
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -233,6 +247,12 @@ nav.navbar-transparent {
 	transform: translateX(-50%) translateY(28px);
 	width: 65%;
   }
+  span.emoji {
+	font-size: 80px;
+	vertical-align: middle;
+	line-height: 2; 
+  }
+  
 
 /* Footer
 -----------------------------*/
@@ -290,6 +310,9 @@ h3 {
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
+	body{
+		background-image: url(images/Beige\ Brown\ Minimal\ Organic\ Creative\ Project\ Presentation.png);
+	}
 	.container .box{
 		display:list-item;
 	}

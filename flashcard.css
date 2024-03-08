@@ -1,13 +1,27 @@
+@font-face {
+  font-family: 'newfont';
+  src: url('/sunday-morning/Sunday\ Morning.otf');
+}
+
+@font-face {
+  font-family: 'showstyle';
+  src: url('/TextFonts.net_hammerhead-typeface-industrial-condensed-font/Hammerhead/');
+}
+
+
 body{
     background-image: url(images/flashcardbg.png);
     background-size:100% 100vh;
     background-repeat:no-repeat;
+   
 }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "newfont", sans-serif;
+    font-size:large;
   }
   
   .container {
@@ -15,6 +29,7 @@ body{
     max-width: 62.5em;
     position: relative;
     margin: auto;
+    
   }
   .add-flashcard-con {
     display: flex;
@@ -28,22 +43,32 @@ body{
   }
   .add-flashcard-con button {
     font-size: 1em;
-    background-color:blue;
-    color: #ffffff;
+    background-color: #FFD1DC;
+    color:  #800000;
     padding: 0.8em 1.2em;
     font-weight: 500;
     border-radius: 0.4em;
   }
   .rearrange button{
+    display:inline-flexbox;
     font-size: 1em;
+    background-color: #F08080;
+    color: #ffffff;
+    padding: 0.8em 1.2em;
+    font-weight: 500;
+    border-radius: 0.4em;
+    }
+   
+    .bytime button{
+      font-size: 1em;
+     display: flex;
     background-color:blue;
     color: #ffffff;
     padding: 0.8em 1.2em;
     font-weight: 500;
     border-radius: 0.4em;
-    
 
-  }
+    }
   #card-con {
     margin-top: 1em;
   }
@@ -156,6 +181,7 @@ body{
   }
   .show-hide-btn {
     display: block;
+    font-family: 'showstyle';
     background-color: #96a7da;
     color: #ffffff;
     text-decoration: none;

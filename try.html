@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Word Fetcher</title>
+<style>
+    @font-face {
+        font-family: 'myfont';
+        src: url('/tritfont/trifont/Champagne\ Design\ -\ Tritone\ Regular.otf');
+    }
+    body{
+        background-image: url(images/temp2.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100vh;
+        font-family: 'myfont';
+        font-weight: bolder;
+        
+    }
+    .box{
+        margin-top: 300px;
+        display:list-item;
+       
+    }
+    .box p{
+        max-width: 300vw;
+    }
+
+    button{
+    font-size: 1em;
+    background-color: #FFD1DC;
+    color:  #800000;
+    padding: 0.8em 1.2em;
+    font-weight: 500;
+    border-radius: 0.4em;
+        
+    }
+    @media screen and (max-width: 800px) {
+    .box {
+        margin-top: 700;
+         
+    }
+    .box p{
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body{
+        background-image: url('images/Beige\ Brown\ Minimal\ Organic\ Creative\ Project\ Presentation.png');
+
+    }
+    .box {
+        margin-top: 200px; 
+        font-size:1rem;
+    }
+    button {
+        font-size: 0.8em; 
+        padding: 0.6em 1em; 
+    }
+}
+</style>
+<script>
+    function fetchRandomWord() {
+        fetch('https://random-word-api.herokuapp.com/word')
+            .then(response => response.json())
+            .then(data => {
+                const randomWord = data[0];
+                fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${randomWord}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Assuming the API returns a definition object
+                        const definition = data[0].meanings[0].definitions[0].definition;
+                        document.getElementById('random-word').innerText = randomWord;
+                        document.getElementById('definition').innerText = definition;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching definition:', error);
+                    });
+            })
+            .catch(error => {
+                console.error('Error fetching random word:', error);
+            });
+    }
+</script>
+</head>
+<body>
+    <center><div class="box">
+    <h1>Random Word Generator</h1>
+   <div class="gener">
+    <button onclick="fetchRandomWord()">Generate Random Word</button>
+   </div>
+ <br><br>
+    <p>Random Word: <span id="random-word"></span></p>
+    <p>Definition: <span id="definition"></span></p>
+</div>
+</center>
+</body>
+</html>
