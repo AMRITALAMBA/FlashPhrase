@@ -1,208 +1,187 @@
-html, body, #home {
-	height: 100%;
-	overflow-x: hidden;
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    background: #ececec;
+    padding: 0 20px 0 20px;
 }
 
-body {
-	background: url(images/Beige\ Brown\ Minimal\ Organic\ Creative\ Project\ Presentation.png);
-				
 
-	background-attachment: fixed;
-	font-family: kuarel;
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.side-image{
+    background-image: url("photo.jpg");
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 200vh;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+.row{
+  width:  800px;
+  height:550px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0px;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+}
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text p{
+    color: #fff;
+    font-size: 20px; 
+}
+i{
+    font-weight: 400;
+    font-size: 15px;
+}
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.input-box{
+  width: 330px;
+  box-sizing: border-box;
+}
+img{
+    width: 35px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.input-box header{
+    font-size: 20;
+    text-align: center;
+    margin-bottom: 40px;
+    
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input{
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+}
+.input-box .input-field label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-field input:focus ~ label
+   {
+    top: -10px;
+    font-size: 13px;
+  }
+  .input-field input:valid ~ label
+  {
+   top: -10px;
+   font-size: 13px;
+   color: #5d5076;
+ }
+ .input-field .input:focus, .input-field .input:valid{
+    border-bottom: 1px solid #743ae1;
+ }
+ .submit{
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #ececec;
+    border-radius: 5px;
+    transition: .4s;
+ }
+ .submit:hover{
+    background: rgba(37, 95, 156, 0.937);
+    color: #fff;
+ }
+ 
+ .login{
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #ececec;
+    border-radius: 5px;
+    transition: .4s;
+ }
+ .login:hover{
+    background: rgba(37, 95, 156, 0.937);
+    color: blue;
+ }
+ .login{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+span a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+    margin-left: 197px;
+}
+span a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    color: solid black;
+    margin-top: 10px;
+}
+.left{
+    display: flex;
+}
+label a{
+    color: solid black;
+    text-decoration: none;
 }
 
-
-nav.navbar-transparent {
-	padding: 15px 0px;
-	background: rgba(0,0,0,0.6);
-}
-
-.navbar-light .navbar-nav .nav-link {
-	color: #FCCFCE;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
-	color: #9bf0e1;
-}
-
-.navbar-light .navbar-toggler {
-    color:#DF6077;
-    border-color:#DF6077;
-}
-
-.divider {
-	width: 1px;
-	background: white;
-	margin: 12px 15px;
-}
-
-
-.cover {
-	text-align: center;
-}
-
-.btn-custom {
-	color: white;
-	border-radius: 500px;
-	-webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
-    text-transform: uppercase;
-    transition: background 0.4s, color 0.4s;
-    padding: 10px 20px;
-}
-
-.btn-purple {
-	background:#DF6077;
-}
-
-.btn-purple:hover {
-	background:lightpink;
-	color: purple;
-}
-
-.btn-white {
-	border: 2px solid white;
-}
-
-.btn-white:hover {
-	background-color: white;
-	color: black;
-}
-
-.carousel-control-next, .carousel-control-prev {
-	width: 5%;
-}
-
-
-.box {
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-#services {
-	background: white;
-}
-
-#features {
-	color: #DF6077;
-    font-size: 20px;
-    font-weight: bolder;
-}
-
-#services h2, h3 {
-	color: #7c25f8;
-}
-
-#features h2 {
-	color: white;
-}
-
-#features h3 {
-	color: #9bf0e1;
-}
-
-.albums {
-	padding: 10px 0;
-}
-
-.rotate {
-	-ms-transform: rotate(360deg); 
-    -webkit-transform: rotate(360deg); 
-    transform: rotate(360deg);
-	padding-left: 80px;
-}
-
-/* Footer
------------------------------*/
-footer {
-	background: #000;
-	padding: 50px 0px 20px 0px;
-	position: relative;
-}
-
-footer h4 {
-	color: #919496;
-	font-size: 0.8em;
-	text-transform: uppercase;
-}
-
-footer .navbar-nav a {
-	color: white;
-	font-size: 0.8em;
-}
-
-footer .navbar-nav a:hover {
-	color: #9bf0e1;
-	text-decoration: none;
-}
-
-footer ul {
-	list-style: none;
-}
-
-footer ul li {
-	float: right;
-	margin: 0 5px;
-}
-
-/* Typography
------------------------------*/
-h1 {
-	font-weight: 900;
-	letter-spacing: -0.05em;
-	margin-bottom: 50px;
-	color: ;
-}
-
-h2 {
-	font-size: 3em;
-	font-weight: 700;
-	letter-spacing: -0.04em;
-}
-
-h3 {
-	font-size: 2em;
-	font-weight: 700;
-	letter-spacing: -0.04em;
-}
-
-/* Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {
-	.btn-custom {
-		margin: 10px 15px;
-		font-size: 1em;
-	}
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-	h1 {
-		font-size: 3em;
-	}
-	.btn-custom {
-		margin: 10px 15px;
-	}
-}
-
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
-	h1 {
-		font-size: 4em;
-	}
-}
-
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-	h1 {
-		font-size: 5em;
-	}
-}
-
-/* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-	h1 {
-		font-size: 6em;
-	}
+@media only screen and (max-width: 768px){
+    .side-image{
+        border-radius: 10px 10px 0 0;
+    }
+    img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+    .text{
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+    .text p, i{
+        font-size: 16px;
+    }
+    .row{
+        max-width:420px;
+        width: 100%;
+    }
 }
