@@ -1,6 +1,7 @@
 /* POPPINS FONT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -63,10 +64,9 @@ img{
     left: 30px;
 }
 .input-box header{
-    font-size: 20;
+    font-weight: 1000;
     text-align: center;
-    margin-bottom: 40px;
-    
+    margin-bottom: 36px;
 }
 .input-field{
     display: flex;
@@ -117,49 +117,20 @@ img{
     background: rgba(37, 95, 156, 0.937);
     color: #fff;
  }
- 
- .login{
-    border: none;
-    outline: none;
-    height: 45px;
-    background: #ececec;
-    border-radius: 5px;
-    transition: .4s;
- }
- .login:hover{
-    background: rgba(37, 95, 156, 0.937);
-    color: blue;
- }
- .login{
+ .signin{
     text-align: center;
     font-size: small;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 span a{
     text-decoration: none;
     font-weight: 700;
     color: #000;
     transition: .5s;
-    margin-left: 197px;
 }
 span a:hover{
     text-decoration: underline;
     color: #000;
-}
-.bottom{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: small;
-    color: solid black;
-    margin-top: 10px;
-}
-.left{
-    display: flex;
-}
-label a{
-    color: solid black;
-    text-decoration: none;
 }
 
 @media only screen and (max-width: 768px){
